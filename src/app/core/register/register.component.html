@@ -1,0 +1,17 @@
+<div class="page">
+    <div style="margin-left:70%">
+        <input type="radio" value="0" [(ngModel)]="select"> Volunteer
+        <input type="radio" value="1" [(ngModel)]="select"> NGO
+        <input type="radio" value="2" [(ngModel)]="select"> Corporate        
+    </div>
+    
+    <div *ngIf="select==0">
+        <app-public></app-public>
+    </div>
+    <div *ngIf="select==1">
+        <app-ngo></app-ngo>
+    </div>
+    <div *ngIf="select==2">
+        <app-corporates></app-corporates>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<ul>
+    <li class="logo">N2C</li>
+    <li *ngIf="!role"><a [routerLink]="['/login']">Login</a></li>
+    <li *ngIf="!role"><a [routerLink]="['/register']">Register</a></li>
+    <li *ngIf="role" (click)="logout()"><a [routerLink]="['/home']">Logout</a></li>
+    <li *ngIf="role=='corporate' || role=='public'"><a [routerLink]="['/ngo-listing']">NGOs</a></li>
+    <li *ngIf="role=='ngo' || role=='public'"><a [routerLink]="['/corporate-listing']">Corporates</a></li>
+    <li *ngIf="role=='public'"><a [routerLink]="['/volunteer']">Volunteer</a></li>
+    <li><a href="#about">Home</a></li>
+</ul>

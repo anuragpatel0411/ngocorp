@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-11 col-sm-11 col-md-3 box">
+        <div style="color:blue; text-align:center;"></div>   
+                
+        <h3>Login</h3>
+    
+        <div id="student" class="tabcontent">  
+            <form class="row">
+                <span class="col-12">
+                    <div style="font-size:12px;color:red;text-align:center">{{errmsg}}</div>
+                </span>
+                <span class="col-12">
+                    <input type="email" id="email" name="email" class="form-control formInput" required [(ngModel)]="emailid" placeholder="Email" #email="ngModel" >
+                    
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                        <div *ngIf="email.errors.required">
+                            Email is required.
+                        </div>
+                    </div>
+                </span>
+                <span class="col-12">
+                    <input type="password" id="password" name="password" class="form-control formInput" required minlength="6"  [(ngModel)]="pass" placeholder="Password" #password="ngModel">
+                
+                    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                        <div *ngIf="password.errors.required">
+                            Password is required.
+                        </div>
+                        <div *ngIf="password.errors.minlength">
+                            Password must be at least 6 characters long.
+                        </div>
+                    </div>
+                </span>
+                
+    
+                <span class="col-12 col-md-12 ">
+                    <input type="submit" (click)="loginuser()" class="submitButton btn btn-primary" value="Login" name="submitStudent">
+                </span>
+            </form>
+            <div style="font-size:12px;color:blue;text-align:center"><a [routerLink]="['/register']">Don't have account? Register</a></div>           
+        </div>
+    </div>
+</div>

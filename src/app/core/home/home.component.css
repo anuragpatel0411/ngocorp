@@ -1,0 +1,68 @@
+.home{
+    background: #f1f1f1;
+}
+.banner{
+    height: 350px;
+    background: #41c74c;
+}
+.col-4{
+    background: #f1f1f1;
+}
+h2{
+    text-align: center;
+    margin-top: 30px;
+}
+.banner .text{
+    padding: 50px 25%;
+    color: #fff;
+}
+.banner .text h2{
+    font-weight: 800;
+    font-size: 45px;
+}
+.banner .text div{
+    font-size: 28px;
+}
+.cards{
+    background: #fff;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow:  3px 6px #dddddd;
+    height: 300px;
+}
+.cards .icon{
+    font-size: 45px;
+    margin: 5px;
+}
+.cards .icontext .headder{
+    font-size: 20px;
+    font-weight: 550;
+    margin-bottom: 15px;
+    margin-top: 20px
+}
+.cards .icontext .bdy{
+    font-size: 16px;
+}
+.testimonials .cards{
+    padding: 40px;
+}
+.testimonials .cards .texts{
+    text-align: left;
+    border-left: 8px solid #cccccc;
+    padding: 10px 20px;
+}
+.testimonials .cards .names {
+    margin-top: 30px;
+    text-align: left;
+}
+.testimonials .cards .names i{
+    font-size: 45px;
+}
+.testimonials .cards .names .text{
+    font-size: 13px;
+}.testimonials .cards .names .name{
+    font-size: 13px;
+    color: red
+}

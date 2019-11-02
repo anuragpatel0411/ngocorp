@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="header"></div>
+    <div class="body" *ngFor="let data of ngoList">
+        <div *ngIf="data.id == id">
+            <div><h1>{{data.name}}</h1></div>
+            <div><b>Location: </b>{{data.location}}</div>
+            <div><b>Field of Work: </b>{{data.field}}</div>
+            <div><b>Email: </b>{{data.email}}</div>
+            <div><b>Fund Recieved: </b>Rs. {{data.fund}}</div>
+            <div><a href="#"><b>Audit Report</b></a></div>
+            <div>
+                <h3>Projects Completed</h3>
+                <ul>
+                    <li *ngFor="let project of data.projectCompleted">{{project}}</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Projects Undergoing</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Project</th>
+                            <th>Budget Utilized</th>
+                            <th>Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>XCAF</td>
+                            <td>Rs. 23,584</td>
+                            <td>  
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:30%">30%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>MNAG</td>
+                            <td>Rs. 74,500</td>
+                            <td>  
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:80%">80%</div>
+                                </div>
+                            </td>
+                        </tr>   
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div style="margin-top:30px">
+                    <h3>Donate Money to this NGO</h3>
+                    <button class="btn btn-success">Donate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

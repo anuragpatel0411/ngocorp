@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="header">
+        <h2>NGO's List</h2>
+    </div>
+    <div class="body">
+        <div><input type="text" [(ngModel)]="search"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Loation</th>
+                    <th>Field of Work</th>
+                    <th>Email</th>
+                    <th></th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ngo of ngoList; let i = index">
+                    <td *ngIf="ngo.name.indexOf(search)!=-1">{{i+1}}</td>
+                    <td *ngIf="ngo.name.indexOf(search)!=-1">{{ngo.name}}</td>
+                    <td *ngIf="ngo.name.indexOf(search)!=-1">{{ngo.location}}</td>
+                    <td *ngIf="ngo.name.indexOf(search)!=-1">{{ngo.field}}</td>
+                    <td *ngIf="ngo.name.indexOf(search)!=-1">{{ngo.email}}</td>
+                    <td *ngIf="ngo.name.indexOf(search)!=-1"><a [routerLink]="['/ngo',ngo.id]">Details</a></td>
+                    <td *ngIf="ngo.name.indexOf(search)!=-1"><span style="color:gold">&#9733; &#9733; &#9733; </span>&#9733; &#9733;  </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="header" *ngIf="role!='public'">
+        <h2>Projects Undergoing</h2>
+    </div>
+    <div class="body" *ngIf="role!='public'">
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Loation</th>
+                    <th>Field of Work</th>
+                    <th>In association with</th>
+                    <th>Progress</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>MXOS</td>
+                    <td>Delhi</td>
+                    <td>Children Education</td>
+                    <td>Demo2</td>
+                    <td><span style="color:gold">&#9733; &#9733; </span>&#9733; &#9733; &#9733;  </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
